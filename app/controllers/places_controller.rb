@@ -13,11 +13,11 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new (place_params)
+    @place = Place.new(place_params)
     if @place.save
-      @place = Place.all
+      redirect_to "/places"  # Redirect to the list of all places
     else
-      @place = Place.new
+      redirect_to "/places/new"  # Redirect back to the new form
     end
   end
 
