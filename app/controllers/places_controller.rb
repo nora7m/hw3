@@ -6,11 +6,12 @@ class PlacesController < ApplicationController
 
   def show
     @place = Place.find (params["id"])
-    @entries = @place.entries
+   
   end
 
   def new
     @place = Place.new
+   
   end
 
   def create

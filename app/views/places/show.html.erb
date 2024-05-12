@@ -1,12 +1,11 @@
 <h1><%= @place.name %></h1>
 
+<p>
+<a href="<%= new_entry_path(@place) %>">Add New Entry</a>
+</p>
+
+<p>
 <a href="/places">Back to Places I've Been</a>
+</p>
 
-<ul>
-   <% for entry in @entries %>
-    <li><%= entry.title %></li>
-  <% end %>
-</ul>
 
-<!-- Link to create new entry -->
-<%= link_to "New Entry", new_place_entry_path(@place) %>

@@ -1,0 +1,14 @@
+<h1>Add New Entry for <%= @place.name %></h1>
+<form action="<%= create_entry_path(@place) %>" method="post">
+ 
+  <label for="title">Title:</label>
+  <input type="text" name="entry[title]" id="title">
+  
+  <label for="description">Description:</label>
+  <input type="text" name="entry[description]" id="description">
+  
+  <label for="date">Date:</label>
+  <input type="date" name="entry[date]" id="date">
+  
+  <input type="submit" value="Create Entry">
+</form>

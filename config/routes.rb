@@ -7,4 +7,6 @@ resources "places"
   get '/places/new' => 'places#new', as: "newplace"
   post '/places' => 'places#create'
   get '/places/:id' => 'places#show', as: "placeshow"
+  get '/entries/new/:place_id' => 'entries#new', as: 'new_entry'
+  post '/entries/:place_id' => 'entries#create', as: 'create_entry'
 end
