@@ -17,12 +17,18 @@ class PlacesController < ApplicationController
   def create
     @place = Place.new(place_params)
     if @place.save
-      redirect_to "/places"  # Redirect to the list of all places
+      puts "Place was successfully created."
+      redirect_to places_path
     else
-      redirect_to "/places/new"  # Redirect back to the new form
+      puts "Failed to create place."
+      redirect_to new_place_path
     end
   end
 
+  def place_params
+    params.require(:place).permit(:name)
+  end
+  
 end
 
 
