@@ -1,11 +1,22 @@
 <h1><%= @place.name %></h1>
 
+<ul>
+  <% for entry in @place.entries %>
+    <li>
+      <strong>Title:</strong> <%= entry.title %><br>
+      <strong>Date:</strong> <%= entry.posted_on.strftime("%Y-%m-%d") %><br>
+      <strong>Description:</strong> <%= entry.description %>
+    </li>
+  <% end %>
+</ul>
+
+
 <p>
 <a href="<%= new_entry_path(@place) %>">Add New Entry</a>
 </p>
 
 <p>
-<a href="/places">Back to Places I've Been</a>
+<a href="/places">Back to Places</a>
 </p>
 
 
