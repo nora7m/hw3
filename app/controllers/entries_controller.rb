@@ -17,4 +17,9 @@ class EntriesController < ApplicationController
       redirect_to new_place_entry_path(@place)  
     end
   end
+
+  def entry_params
+    params.require(:entry).permit(:title, :date, :description)
+  end
+  
 end

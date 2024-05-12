@@ -1,5 +1,6 @@
 <h1>Add New Entry for <%= @place.name %></h1>
 <form action="<%= create_entry_path(@place) %>" method="post">
+ <input type="hidden" name="entry[place_id]" value="<%= @place.id %>">
  
  <p>
   <label for="title">Title:</label>
@@ -15,6 +16,8 @@
   <label for="description">Description:</label>
   <input type="text" name="entry[description]" id="description">
  </p>
+
+ 
 
   <input type="submit" value="Create Entry">
 
