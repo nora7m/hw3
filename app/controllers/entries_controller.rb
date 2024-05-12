@@ -1,11 +1,11 @@
 class EntriesController < ApplicationController
   def new
-    @place = Place.find(params[“place_id”]) 
+    @place = Place.find(params["place_id"]) 
     @entry = Entry.new  
   end
 
   def create
-    @place = Place.find(params[“place_id”]) 
+    @place = Place.find(params["place_id"]) 
     @entry = Entry.new(entry_params)  
     @entry.place_id = @place.id  
 
