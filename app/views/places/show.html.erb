@@ -2,17 +2,18 @@
 
 <ul>
   <% for entry in @place.entries %>
-    <li>
+    <p>
       <strong>Title:</strong> <%= entry.title %><br>
       <strong>Date:</strong> <%= entry.posted_on.strftime("%Y-%m-%d") %><br>
       <strong>Description:</strong> <%= entry.description %>
-    </li>
+    </p>
+  
   <% end %>
 </ul>
 
 
 <p>
-<a href="<%= new_entry_path(@place) %>">Add New Entry</a>
+<a href="<%= new_entry_path(@place) %>">New Post</a>
 </p>
 
 <p>
