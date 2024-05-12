@@ -2,7 +2,7 @@
 
 <ul>
   <% for entry in @place.entries %>
-    <li>
+    
       <p>
         <strong>Title:</strong> <%= entry.title %><br>
         <% if entry.posted_on %>
@@ -12,7 +12,7 @@
         <% end %>
         <strong>Description:</strong> <%= entry.description %>
       </p>
-    </li>
+    
   <% end %>
 </ul>
 
